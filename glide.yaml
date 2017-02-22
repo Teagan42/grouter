@@ -1,0 +1,4 @@
+package: github.com/teagan42/grouter
+import:
+- package: github.com/spf13/viper
+- package: github.com/Sirupsen/logrus
