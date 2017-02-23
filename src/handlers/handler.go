@@ -3,8 +3,7 @@ package handlers
 import (
 	"log"
 	"net/http"
+	"github.com/stretchr/testify/http"
 )
 
-type handler interface {
-	//func handle(w http.ResponseWriter, r *http.Request, func );
-}
+type handler interface {}

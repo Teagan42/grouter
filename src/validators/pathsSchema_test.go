@@ -36,10 +36,10 @@ func TestPaths(t *testing.T) {
 			}
 			for _, value := range testValues {
 				func (val obj) {
-					var _, err = HttpMethod().Validate(val)
+					var _, err = Paths().Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an invalid http method", val)
+						t.Errorf("Expected '%s' to be an invalid paths", val)
 					}
 				} (value)
 			}
