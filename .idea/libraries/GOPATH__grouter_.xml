@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;grouter&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../swagger-ui" />
+      <root url="file://$PROJECT_DIR$/../ha-config" />
+      <root url="file://$PROJECT_DIR$/../salt" />
+      <root url="file://$PROJECT_DIR$/../massroots" />
+      <root url="file://$PROJECT_DIR$/../technicolor-logger" />
+      <root url="file://$PROJECT_DIR$/../GoglandProjects" />
+      <root url="file://$PROJECT_DIR$/../Deepthought-Routing" />
+      <root url="file://$PROJECT_DIR$/../ReactSocial" />
+      <root url="file://$PROJECT_DIR$/../pillar" />
+      <root url="file://$PROJECT_DIR$/../home-assistant" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../swagger-ui" />
+      <root url="file://$PROJECT_DIR$/../ha-config" />
+      <root url="file://$PROJECT_DIR$/../salt" />
+      <root url="file://$PROJECT_DIR$/../massroots" />
+      <root url="file://$PROJECT_DIR$/../technicolor-logger" />
+      <root url="file://$PROJECT_DIR$/../GoglandProjects" />
+      <root url="file://$PROJECT_DIR$/../Deepthought-Routing" />
+      <root url="file://$PROJECT_DIR$/../ReactSocial" />
+      <root url="file://$PROJECT_DIR$/../pillar" />
+      <root url="file://$PROJECT_DIR$/../home-assistant" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
