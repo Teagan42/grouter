@@ -18,13 +18,13 @@ func TestStringUrl(t *testing.T) {
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []string{"", "%google", "@.com", "@gmail.com"}
+			var testValues = []interface{}{"", "%google", "@.com", "@gmail.com"}
 			for _, value := range testValues {
-				func (val string) {
+				func (val interface{}) {
 					var _, err = v.String(StringUrl()).Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an invalid url", val)
+						t.Errorf("Expected '%s' to be an invalid url - %s", val, err)
 					}
 				} (value)
 			}
@@ -32,13 +32,14 @@ func TestStringUrl(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []string{"google.com", "massroots.com", "http://teagantotally.rocks"}
+		var testValues = []interface{}{"google.com", "massroots.com", "http://teagantotally.rocks"}
+
 		for _, value := range testValues {
-			func (val string) {
+			func (val interface{}) {
 				var _, err = v.String(StringUrl()).Validate(val)
 
 				if err != nil {
-					t.Errorf("Expected %s to be a valid url", val);
+					t.Errorf("Expected %s to be a valid url - %s", val, err);
 				}
 			} (value)
 		}
@@ -53,18 +54,18 @@ func TestStringRelative(t *testing.T) {
 			var _, err = v.String(StringRelative()).Validate(nil)
 
 			if err == nil {
-				t.Error("Expected nil to be an invalid relative url")
+				t.Error("Expected nil to be an invalid relative url - %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []string{"", "test", "%google", "@.com", "@gmail.com"}
+			var testValues = []interface{}{"", "test", "%google", "@.com", "@gmail.com"}
 			for _, value := range testValues {
-				func (val string) {
+				func (val interface{}) {
 					var _, err = v.String(StringRelative()).Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an invalid relative url", val)
+						t.Errorf("Expected '%s' to be an invalid relative url - %s", val, err)
 					}
 				} (value)
 			}
@@ -72,13 +73,14 @@ func TestStringRelative(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []string{"/google.com", "/posts/", "/api/comments/203"}
+		var testValues = []interface{}{"/google.com", "/posts/", "/api/comments/203"}
+
 		for _, value := range testValues {
-			func (val string) {
+			func (val interface{}) {
 				var _, err = v.String(StringRelative()).Validate(val)
 
 				if err != nil {
-					t.Errorf("Expected %s to be a valid relative url", val);
+					t.Errorf("Expected %s to be a valid relative url - %s", val, err);
 				}
 			} (value)
 		}

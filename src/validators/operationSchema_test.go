@@ -13,21 +13,21 @@ func TestOperation(t *testing.T) {
 			var _, err = Operation().Validate(nil)
 
 			if err == nil {
-				t.Error("Expected nil to be an invalid operation")
+				t.Error("Expected nil to be an invalid operation - %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []obj{
+			var testValues = []interface{}{
 				obj{},
 				obj{"tags": []string{}},
 			}
 			for _, value := range testValues {
-				func (val obj) {
+				func (val interface{}) {
 					var _, err = Operation().Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an invalid operation", val)
+						t.Errorf("Expected '%s' to be an invalid operation - %s", val, err)
 					}
 				} (value)
 			}
@@ -35,7 +35,7 @@ func TestOperation(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []obj{
+		var testValues = []interface{}{
 			obj{
 				"summary": "test",
 				"description": "Testing",
@@ -43,11 +43,11 @@ func TestOperation(t *testing.T) {
 			},
 		}
 		for _, value := range testValues {
-			func (val obj) {
+			func (val interface{}) {
 				var _, err = Operation().Validate(val)
 
 				if err != nil {
-					t.Errorf("Expected %s to be a valid mime type", val);
+					t.Errorf("Expected %s to be a valid mime type - %s", val, err);
 				}
 			} (value)
 		}
@@ -62,18 +62,18 @@ func TestStringMimeType(t *testing.T) {
 			var _, err = v.String(StringMimeType()).Validate(nil)
 
 			if err == nil {
-				t.Error("Expected nil to be an invalid mime type")
+				t.Error("Expected nil to be an invalid mime type - %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []string{"", "test", "@gmail", "@.com", "@gmail.com", "application/"}
+			var testValues = []interface{}{"", "test", "@gmail", "@.com", "@gmail.com", "application/"}
 			for _, value := range testValues {
-				func (val string) {
+				func (val interface{}) {
 					var _, err = v.String(StringMimeType()).Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an invalid mimetype", val)
+						t.Errorf("Expected '%s' to be an invalid mimetype - %s", val, err)
 					}
 				} (value)
 			}
@@ -81,13 +81,13 @@ func TestStringMimeType(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []string{"application/*", "image/jpeg", "application/json"}
+		var testValues = []interface{}{"application/*", "image/jpeg", "application/json"}
 		for _, value := range testValues {
-			func (val string) {
+			func (val interface{}) {
 				var _, err = v.String(StringMimeType()).Validate(val)
 
 				if err != nil {
-					t.Errorf("Expected %s to be a valid mime type", val);
+					t.Errorf("Expected %s to be a valid mime type - %s", val, err);
 				}
 			} (value)
 		}

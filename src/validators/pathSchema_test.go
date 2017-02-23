@@ -9,21 +9,21 @@ func TestHttpMethod(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			var _, err = HttpMethod().Validate(nil)
+			var res, err = HttpMethod().Validate(nil)
 
 			if err == nil {
-				t.Error("Expected nil to be an invalid paths")
+				t.Error("Expected nil to be an invalid paths - %s", res)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []string{"", "test", "@gmail", "@.com", "@gmail.com", "application/"}
+			var testValues = []interface{}{"", "test", "@gmail", "@.com", "@gmail.com", "application/"}
 			for _, value := range testValues {
-				func (val string) {
-					var _, err = HttpMethod().Validate(val)
+				func (val interface{}) {
+					var res, err = HttpMethod().Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an paths", val)
+						t.Errorf("Expected '%s' to be an paths - %s", val, res)
 					}
 				} (value)
 			}
@@ -31,13 +31,13 @@ func TestHttpMethod(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []string{"get", "put", "post", "delete"}
+		var testValues = []interface{}{"get", "put", "post", "delete"}
 		for _, value := range testValues {
-			func (val string) {
-				var _, err = HttpMethod().Validate(val)
+			func (val interface{}) {
+				var res, err = HttpMethod().Validate(val)
 
 				if err != nil {
-					t.Errorf("Expected %s to be a valid paths", val);
+					t.Errorf("Expected %s to be a valid paths - %s", val, res);
 				}
 			} (value)
 		}
@@ -52,12 +52,12 @@ func TestPath(t *testing.T) {
 			var _, err = Path().Validate(nil)
 
 			if err == nil {
-				t.Error("Expected nil to be an invalid path")
+				t.Errorf("Expected nil to be an invalid path - %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []obj{
+			var testValues = []interface{}{
 				obj{
 					"get": obj{
 						"description": "Test",
@@ -67,11 +67,11 @@ func TestPath(t *testing.T) {
 				},
 			}
 			for _, value := range testValues {
-				func (val obj) {
+				func (val interface{}) {
 					var _, err = Path().Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an invalid path", val)
+						t.Errorf("Expected '%s' to be an invalid path - %s", val, err)
 					}
 				} (value)
 			}
@@ -79,7 +79,7 @@ func TestPath(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []obj{
+		var testValues = []interface{}{
 			obj{
 				"delete": obj{
 					"summary": "test",
@@ -89,11 +89,11 @@ func TestPath(t *testing.T) {
 			},
 		}
 		for _, value := range testValues {
-			func (val obj) {
+			func (val interface{}) {
 				var _, err = Path().Validate(val)
 
 				if err != nil {
-					t.Errorf("Expected %s to be a valid path", val);
+					t.Errorf("Expected %s to be a valid path - %s", val, err);
 				}
 			} (value)
 		}

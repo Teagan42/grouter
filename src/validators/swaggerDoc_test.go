@@ -12,12 +12,12 @@ func TestSwaggerDoc(t *testing.T) {
 			var _, err = SwaggerDoc().Validate(nil)
 
 			if err == nil {
-				t.Error("Expected nil to be an invalid swagger doc")
+				t.Error("Expected nil to be an invalid swagger doc - %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []obj{
+			var testValues = []interface{}{
 				obj{
 					"pid": obj{},
 				},
@@ -33,11 +33,11 @@ func TestSwaggerDoc(t *testing.T) {
 				},
 			}
 			for _, value := range testValues {
-				func (val obj) {
-					var path, err = SwaggerDoc().Validate(val)
+				func (val interface{}) {
+					var _, err = SwaggerDoc().Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an invalid swagger doc - %s", val, path)
+						t.Errorf("Expected '%s' to be an invalid swagger doc - %s", val, err)
 					}
 				} (value)
 			}
@@ -45,7 +45,7 @@ func TestSwaggerDoc(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []obj{
+		var testValues = []interface{}{
 			obj{
 				"swagger": "2.0",
 				"info": obj{
@@ -95,11 +95,11 @@ func TestSwaggerDoc(t *testing.T) {
 			},
 		}
 		for _, value := range testValues {
-			func (val obj) {
+			func (val interface{}) {
 				var _, err = SwaggerDoc().Validate(val)
 
 				if err != nil {
-					t.Errorf("Expected %s to be a valid swagger doc", val);
+					t.Errorf("Expected %s to be a valid swagger doc - %s", val, err);
 				}
 			} (value)
 		}

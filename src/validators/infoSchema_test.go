@@ -14,7 +14,7 @@ func TestInfo(t *testing.T) {
 			var _, err = Info().Validate(nil)
 
 			if err == nil {
-				t.Error("expected nil to be an invalid license")
+				t.Error("expected nil to be an invalid license - %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
@@ -31,7 +31,7 @@ func TestInfo(t *testing.T) {
 
 					if err == nil {
 						var disp, _ = json.Marshal(val)
-						t.Errorf("expecteded %s to be an invalid license", disp)
+						t.Errorf("expecteded %s to be an invalid license - %s", disp, err)
 					}
 				}(value)
 			}
@@ -57,7 +57,7 @@ func TestInfo(t *testing.T) {
 
 					if err != nil {
 						var disp, _ = json.Marshal(val)
-						t.Errorf("expecteded %s to be a valid license %s", disp, err)
+						t.Errorf("expecteded %s to be a valid license - %s", disp, err)
 					}
 				}(value)
 			}

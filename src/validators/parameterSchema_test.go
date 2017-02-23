@@ -15,7 +15,7 @@ func TestParameterType(t *testing.T) {
 			var _, err = ParameterType().Validate(nil)
 
 			if err == nil {
-				t.Error("expected nil to be an invalid parameter type")
+				t.Errorf("expected nil to be an invalid parameter type - %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
@@ -50,11 +50,11 @@ func TestParameterType(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					var r, err = ParameterType().Validate(val)
+					var _, err = ParameterType().Validate(val)
 
 					if err != nil {
 						var disp, _ = json.Marshal(val)
-						t.Errorf("expecteded %s to be a valid parameter type %s %s", disp, r, err)
+						t.Errorf("expecteded %s to be a valid parameter type - %s", disp, err)
 					}
 				}(value)
 			}
@@ -114,11 +114,11 @@ func TestParameter(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					var r, err = Parameter().Validate(val)
+					var _, err = Parameter().Validate(val)
 
 					if err != nil {
 						var disp, _ = json.Marshal(val)
-						t.Errorf("expecteded %s to be a valid parameter %s - %s", disp, r, err)
+						t.Errorf("expecteded %s to be a valid parameter - %s", disp, err)
 					}
 				}(value)
 			}

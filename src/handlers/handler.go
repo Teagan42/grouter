@@ -1,9 +1,8 @@
 package handlers
 
-import (
-	"log"
-	"net/http"
-	"github.com/stretchr/testify/http"
-)
+import "net/http"
 
-type handler interface {}
+type handler struct {
+	handle func(w http.ResponseWriter, r http.Request) bool
+	next *handler
+}

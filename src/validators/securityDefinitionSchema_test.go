@@ -12,12 +12,12 @@ func TestSecurityDefinition(t *testing.T) {
 			var _, err = SecurityDefinition().Validate(nil)
 
 			if err == nil {
-				t.Error("Expected nil to be an invalid security definition")
+				t.Error("Expected nil to be an invalid security definition - %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []obj{
+			var testValues = []interface{}{
 				obj{
 					"pid": obj{},
 				},
@@ -33,11 +33,11 @@ func TestSecurityDefinition(t *testing.T) {
 				},
 			}
 			for _, value := range testValues {
-				func (val obj) {
+				func (val interface{}) {
 					var _, err = SecurityDefinition().Validate(val)
 
 					if err == nil {
-						t.Errorf("Expected '%s' to be an invalid security definition", val)
+						t.Errorf("Expected '%s' to be an invalid security definition", val, err)
 					}
 				} (value)
 			}
@@ -45,7 +45,7 @@ func TestSecurityDefinition(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []obj{
+		var testValues = []interface{}{
 			obj{
 				"apiKey": obj{
 					"name": "api",
@@ -60,11 +60,11 @@ func TestSecurityDefinition(t *testing.T) {
 			},
 		}
 		for _, value := range testValues {
-			func (val obj) {
+			func (val interface{}) {
 				var _, err = SecurityDefinition().Validate(val)
 
 				if err != nil {
-					t.Errorf("Expected %s to be a valid security definition", val);
+					t.Errorf("Expected %s to be a valid security definition - %s", val, err);
 				}
 			} (value)
 		}

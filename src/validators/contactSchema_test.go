@@ -14,7 +14,7 @@ func TestContactSchema(t *testing.T) {
 			var _, err = Contact().Validate(nil)
 
 			if err == nil {
-				t.Error("expected nil to be an invalid contact")
+				t.Errorf("expected nil to be an invalid contact: %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
@@ -31,7 +31,7 @@ func TestContactSchema(t *testing.T) {
 
 					if err == nil {
 						var disp, _ = json.Marshal(val)
-						t.Errorf("expecteded %s to be an invalid contact", disp)
+						t.Errorf("expecteded %s to be an invalid contact - %s", disp, err)
 					}
 				}(value)
 			}
@@ -53,7 +53,7 @@ func TestContactSchema(t *testing.T) {
 
 					if err != nil {
 						var disp, _ = json.Marshal(val)
-						t.Errorf("expecteded %s to be a valid contact %s", disp, err)
+						t.Errorf("expecteded %s to be a valid contact - %s", disp, err)
 					}
 				}(value)
 			}
