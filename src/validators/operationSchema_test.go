@@ -10,7 +10,7 @@ func TestOperation(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			var _, err = Operation().Validate(nil)
+			_, err := Operation().Validate(nil)
 
 			if err == nil {
 				t.Error("Expected nil to be an invalid operation - %s", err)
@@ -18,13 +18,13 @@ func TestOperation(t *testing.T) {
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				obj{},
 				obj{"tags": []string{}},
 			}
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = Operation().Validate(val)
+					_, err := Operation().Validate(val)
 
 					if err == nil {
 						t.Errorf("Expected '%s' to be an invalid operation - %s", val, err)
@@ -35,7 +35,7 @@ func TestOperation(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []interface{}{
+		testValues := []interface{}{
 			obj{
 				"summary": "test",
 				"description": "Testing",
@@ -44,7 +44,7 @@ func TestOperation(t *testing.T) {
 		}
 		for _, value := range testValues {
 			func (val interface{}) {
-				var _, err = Operation().Validate(val)
+				_, err := Operation().Validate(val)
 
 				if err != nil {
 					t.Errorf("Expected %s to be a valid mime type - %s", val, err);

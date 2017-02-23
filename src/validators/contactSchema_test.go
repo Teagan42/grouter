@@ -11,7 +11,7 @@ func TestContactSchema(t *testing.T) {
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
 
-			var _, err = Contact().Validate(nil)
+			_, err := Contact().Validate(nil)
 
 			if err == nil {
 				t.Errorf("expected nil to be an invalid contact: %s", err)
@@ -19,7 +19,7 @@ func TestContactSchema(t *testing.T) {
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				obj{"url": "google.com", "email": "teagan@massroots.com"},
 				obj{"name": 5, "email": 0.5, "url": "google.com"},
 				obj{"name": "Bob", "email": "nope", "url": "here"},
@@ -27,10 +27,10 @@ func TestContactSchema(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = Contact().Validate(val)
+					_, err := Contact().Validate(val)
 
 					if err == nil {
-						var disp, _ = json.Marshal(val)
+						disp, _ := json.Marshal(val)
 						t.Errorf("expecteded %s to be an invalid contact - %s", disp, err)
 					}
 				}(value)
@@ -42,17 +42,17 @@ func TestContactSchema(t *testing.T) {
 
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				obj{"name": "Bob", "url": "google.com", "email": "teagan@massroots.com"},
 				obj{"name": "Jim", "email": "123eye@on.me", "url": "https://massroots.com"},
 			}
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = Contact().Validate(val)
+					_, err := Contact().Validate(val)
 
 					if err != nil {
-						var disp, _ = json.Marshal(val)
+						disp, _ := json.Marshal(val)
 						t.Errorf("expecteded %s to be a valid contact - %s", disp, err)
 					}
 				}(value)

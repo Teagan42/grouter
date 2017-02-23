@@ -9,9 +9,7 @@ import (
 
 func ParameterType() v.Validator {
 	var validatorValidator = func (data interface{}) (path string, err error) {
-		var _, ok = data.(v.Validator)
-
-		if !ok {
+		if _, ok := data.(v.Validator); !ok {
 			return "validatorValidator", fmt.Errorf("expected validator, got %s", reflect.TypeOf(data))
 		}
 

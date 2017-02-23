@@ -12,12 +12,12 @@ import (
 
 func SecurityRequirementHandler(securityRequirement *map[interface{}]interface{}) func(http.ResponseWriter, *http.Request) {
 	var isPresent = func (name string, context interface{}) bool {
-		var _, ok = context["foo"];
+		var _, ok = context[name];
 
 		return ok
 	}
 	var handler = func (w http.ResponseWriter, r *http.Request) {
-		for _, def := range securityRequirement {
+		for _, def := securityRequirement {
 			var isGoodReq = false
 
 			switch def["in"] {

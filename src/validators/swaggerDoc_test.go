@@ -9,7 +9,7 @@ func TestSwaggerDoc(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			var _, err = SwaggerDoc().Validate(nil)
+			_, err := SwaggerDoc().Validate(nil)
 
 			if err == nil {
 				t.Error("Expected nil to be an invalid swagger doc - %s", err)
@@ -17,7 +17,7 @@ func TestSwaggerDoc(t *testing.T) {
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				obj{
 					"pid": obj{},
 				},
@@ -34,7 +34,7 @@ func TestSwaggerDoc(t *testing.T) {
 			}
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = SwaggerDoc().Validate(val)
+					_, err := SwaggerDoc().Validate(val)
 
 					if err == nil {
 						t.Errorf("Expected '%s' to be an invalid swagger doc - %s", val, err)

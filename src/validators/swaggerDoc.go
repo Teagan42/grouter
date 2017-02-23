@@ -5,7 +5,7 @@ import (
 )
 
 func SwaggerDoc() v.Validator {
-	var scheme = func () v.Validator {
+	scheme := func () v.Validator {
 		return v.Or(
 			v.String(v.StrIs("http")),
 			v.String(v.StrIs("https")),

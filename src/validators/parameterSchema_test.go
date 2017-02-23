@@ -12,7 +12,7 @@ func TestParameterType(t *testing.T) {
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
 
-			var _, err = ParameterType().Validate(nil)
+			_, err := ParameterType().Validate(nil)
 
 			if err == nil {
 				t.Errorf("expected nil to be an invalid parameter type - %s", err)
@@ -20,7 +20,7 @@ func TestParameterType(t *testing.T) {
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				obj{"url": "google.com"},
 				obj{"name": 5, "url": "google.com"},
 				obj{},
@@ -28,10 +28,10 @@ func TestParameterType(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = ParameterType().Validate(val)
+					_, err := ParameterType().Validate(val)
 
 					if err == nil {
-						var disp, err = json.Marshal(val)
+						disp, err := json.Marshal(val)
 						t.Errorf("expecteded %s to be an invalid parameter type %s", disp, err)
 					}
 				}(value)
@@ -43,17 +43,17 @@ func TestParameterType(t *testing.T) {
 
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				v.String(),
 				v.Object(),
 			}
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = ParameterType().Validate(val)
+					_, err := ParameterType().Validate(val)
 
 					if err != nil {
-						var disp, _ = json.Marshal(val)
+						disp, _ := json.Marshal(val)
 						t.Errorf("expecteded %s to be a valid parameter type - %s", disp, err)
 					}
 				}(value)
@@ -68,7 +68,7 @@ func TestParameter(t *testing.T) {
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
 
-			var _, err = Parameter().Validate(nil)
+			_, err := Parameter().Validate(nil)
 
 			if err == nil {
 				t.Error("expected nil to be an invalid parameter")
@@ -76,7 +76,7 @@ func TestParameter(t *testing.T) {
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				obj{"url": "google.com"},
 				obj{"name": 5, "url": "google.com"},
 				obj{},
@@ -84,10 +84,10 @@ func TestParameter(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = Parameter().Validate(val)
+					_, err := Parameter().Validate(val)
 
 					if err == nil {
-						var disp, err = json.Marshal(val)
+						disp, err := json.Marshal(val)
 						t.Errorf("expecteded %s to be an invalid parameter %s", disp, err)
 					}
 				}(value)
@@ -99,7 +99,7 @@ func TestParameter(t *testing.T) {
 
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				obj{
 					"name": "id",
 					"in": "path",
@@ -114,10 +114,10 @@ func TestParameter(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = Parameter().Validate(val)
+					_, err := Parameter().Validate(val)
 
 					if err != nil {
-						var disp, _ = json.Marshal(val)
+						disp, _ := json.Marshal(val)
 						t.Errorf("expecteded %s to be a valid parameter - %s", disp, err)
 					}
 				}(value)

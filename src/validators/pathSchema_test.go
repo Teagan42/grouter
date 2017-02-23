@@ -49,7 +49,7 @@ func TestPath(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			var _, err = Path().Validate(nil)
+			_, err := Path().Validate(nil)
 
 			if err == nil {
 				t.Errorf("Expected nil to be an invalid path - %s", err)
@@ -57,7 +57,7 @@ func TestPath(t *testing.T) {
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
-			var testValues = []interface{}{
+			testValues := []interface{}{
 				obj{
 					"get": obj{
 						"description": "Test",
@@ -68,7 +68,7 @@ func TestPath(t *testing.T) {
 			}
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = Path().Validate(val)
+					_, err := Path().Validate(val)
 
 					if err == nil {
 						t.Errorf("Expected '%s' to be an invalid path - %s", val, err)
@@ -79,7 +79,7 @@ func TestPath(t *testing.T) {
 	})
 	t.Run("validates", func(t *testing.T) {
 		t.Parallel()
-		var testValues = []interface{}{
+		testValues := []interface{}{
 			obj{
 				"delete": obj{
 					"summary": "test",
@@ -90,7 +90,7 @@ func TestPath(t *testing.T) {
 		}
 		for _, value := range testValues {
 			func (val interface{}) {
-				var _, err = Path().Validate(val)
+				_, err := Path().Validate(val)
 
 				if err != nil {
 					t.Errorf("Expected %s to be a valid path - %s", val, err);
