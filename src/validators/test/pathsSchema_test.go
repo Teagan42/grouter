@@ -2,6 +2,7 @@ package validators
 
 import (
 	"testing"
+	"validators"
 )
 
 func TestPaths(t *testing.T) {
@@ -9,7 +10,7 @@ func TestPaths(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			_, err := Paths().Validate(nil)
+			_, err := validators.Paths().Validate(nil)
 
 			if err == nil {
 				t.Error("Expected nil to be an invalid paths - %s", err)
@@ -36,7 +37,7 @@ func TestPaths(t *testing.T) {
 			}
 			for _, value := range testValues {
 				func (val *interface{}) {
-					_, err := Paths().Validate(val)
+					_, err := validators.Paths().Validate(val)
 
 					if err == nil {
 						t.Errorf("Expected '%s' to be an invalid paths - %s", val, err)
@@ -72,7 +73,7 @@ func TestPaths(t *testing.T) {
 		}
 		for _, value := range testValues {
 			func (val interface{}) {
-				_, err := Paths().Validate(val)
+				_, err := validators.Paths().Validate(val)
 
 				if err != nil {
 					t.Errorf("Expected %s to be a valid paths - %s", val, err);

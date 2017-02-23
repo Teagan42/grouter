@@ -2,6 +2,7 @@ package validators
 
 import (
 	"testing"
+	"validators"
 )
 
 func TestSwaggerDoc(t *testing.T) {
@@ -9,7 +10,7 @@ func TestSwaggerDoc(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			_, err := SwaggerDoc().Validate(nil)
+			_, err := validators.SwaggerDoc().Validate(nil)
 
 			if err == nil {
 				t.Error("Expected nil to be an invalid swagger doc - %s", err)
@@ -34,7 +35,7 @@ func TestSwaggerDoc(t *testing.T) {
 			}
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := SwaggerDoc().Validate(val)
+					_, err := validators.SwaggerDoc().Validate(val)
 
 					if err == nil {
 						t.Errorf("Expected '%s' to be an invalid swagger doc - %s", val, err)
@@ -96,7 +97,7 @@ func TestSwaggerDoc(t *testing.T) {
 		}
 		for _, value := range testValues {
 			func (val interface{}) {
-				var _, err = SwaggerDoc().Validate(val)
+				var _, err = validators.SwaggerDoc().Validate(val)
 
 				if err != nil {
 					t.Errorf("Expected %s to be a valid swagger doc - %s", val, err);

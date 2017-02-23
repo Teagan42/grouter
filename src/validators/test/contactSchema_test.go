@@ -3,34 +3,36 @@ package validators
 import (
 	"testing"
 	"encoding/json"
+	"validators"
 )
 
-func TestLicenseSchema(t *testing.T) {
+func TestContactSchema(t *testing.T) {
 	t.Run("invalidates", func (t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
 
-			_, err := License().Validate(nil)
+			_, err := validators.Contact().Validate(nil)
 
 			if err == nil {
-				t.Error("expected nil to be an invalid license - %s", err)
+				t.Errorf("expected nil to be an invalid contact: %s", err)
 			}
 		})
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
 			testValues := []interface{}{
-				obj{"url": "google.com"},
-				obj{"name": 5, "url": "google.com"},
+				obj{"url": "google.com", "email": "teagan@massroots.com"},
+				obj{"name": 5, "email": 0.5, "url": "google.com"},
+				obj{"name": "Bob", "email": "nope", "url": "here"},
 			}
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := License().Validate(val)
+					_, err := validators.Contact().Validate(val)
 
 					if err == nil {
 						disp, _ := json.Marshal(val)
-						t.Errorf("expecteded %s to be an invalid license - %s", disp, err)
+						t.Errorf("expecteded %s to be an invalid contact - %s", disp, err)
 					}
 				}(value)
 			}
@@ -42,17 +44,17 @@ func TestLicenseSchema(t *testing.T) {
 		t.Run("values", func (t *testing.T) {
 			t.Parallel()
 			testValues := []interface{}{
-				obj{"name": "Bob", "url": "google.com"},
-				obj{"name": "Jim", "url": "https://massroots.com"},
+				obj{"name": "Bob", "url": "google.com", "email": "teagan@massroots.com"},
+				obj{"name": "Jim", "email": "123eye@on.me", "url": "https://massroots.com"},
 			}
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := License().Validate(val)
+					_, err := validators.Contact().Validate(val)
 
 					if err != nil {
 						disp, _ := json.Marshal(val)
-						t.Errorf("expecteded %s to be a valid license - %s", disp, err)
+						t.Errorf("expecteded %s to be a valid contact - %s", disp, err)
 					}
 				}(value)
 			}

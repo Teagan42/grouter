@@ -2,6 +2,7 @@ package validators
 
 import (
 	"testing"
+	"validators"
 	"encoding/json"
 )
 
@@ -11,7 +12,7 @@ func TestInfo(t *testing.T) {
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
 
-			_, err := Info().Validate(nil)
+			_, err := validators.Info().Validate(nil)
 
 			if err == nil {
 				t.Error("expected nil to be an invalid license - %s", err)
@@ -27,7 +28,7 @@ func TestInfo(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := Info().Validate(val)
+					_, err := validators.Info().Validate(val)
 
 					if err == nil {
 						disp, _ := json.Marshal(val)
@@ -53,7 +54,7 @@ func TestInfo(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := Info().Validate(val)
+					_, err := validators.Info().Validate(val)
 
 					if err != nil {
 						disp, _ := json.Marshal(val)

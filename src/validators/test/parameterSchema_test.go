@@ -3,6 +3,7 @@ package validators
 import (
 	v "github.com/gima/govalid/v1"
 	"testing"
+	"validators"
 	"encoding/json"
 )
 
@@ -12,7 +13,7 @@ func TestParameterType(t *testing.T) {
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
 
-			_, err := ParameterType().Validate(nil)
+			_, err := validators.ParameterType().Validate(nil)
 
 			if err == nil {
 				t.Errorf("expected nil to be an invalid parameter type - %s", err)
@@ -28,7 +29,7 @@ func TestParameterType(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := ParameterType().Validate(val)
+					_, err := validators.ParameterType().Validate(val)
 
 					if err == nil {
 						disp, err := json.Marshal(val)
@@ -50,7 +51,7 @@ func TestParameterType(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := ParameterType().Validate(val)
+					_, err := validators.ParameterType().Validate(val)
 
 					if err != nil {
 						disp, _ := json.Marshal(val)
@@ -68,7 +69,7 @@ func TestParameter(t *testing.T) {
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
 
-			_, err := Parameter().Validate(nil)
+			_, err := validators.Parameter().Validate(nil)
 
 			if err == nil {
 				t.Error("expected nil to be an invalid parameter")
@@ -84,7 +85,7 @@ func TestParameter(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := Parameter().Validate(val)
+					_, err := validators.Parameter().Validate(val)
 
 					if err == nil {
 						disp, err := json.Marshal(val)
@@ -114,7 +115,7 @@ func TestParameter(t *testing.T) {
 
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := Parameter().Validate(val)
+					_, err := validators.Parameter().Validate(val)
 
 					if err != nil {
 						disp, _ := json.Marshal(val)

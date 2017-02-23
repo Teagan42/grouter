@@ -2,6 +2,7 @@ package validators
 
 import (
 	"testing"
+	"validators"
 )
 
 func TestSecurityDefinition(t *testing.T) {
@@ -9,7 +10,7 @@ func TestSecurityDefinition(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			_, err := SecurityDefinition().Validate(nil)
+			_, err := validators.SecurityDefinition().Validate(nil)
 
 			if err == nil {
 				t.Error("Expected nil to be an invalid security definition - %s", err)
@@ -34,7 +35,7 @@ func TestSecurityDefinition(t *testing.T) {
 			}
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := SecurityDefinition().Validate(val)
+					_, err := validators.SecurityDefinition().Validate(val)
 
 					if err == nil {
 						t.Errorf("Expected '%s' to be an invalid security definition", val, err)
@@ -61,7 +62,7 @@ func TestSecurityDefinition(t *testing.T) {
 		}
 		for _, value := range testValues {
 			func (val interface{}) {
-				_, err := SecurityDefinition().Validate(val)
+				_, err := validators.SecurityDefinition().Validate(val)
 
 				if err != nil {
 					t.Errorf("Expected %s to be a valid security definition - %s", val, err);

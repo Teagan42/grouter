@@ -2,6 +2,7 @@ package validators
 
 import (
 	"testing"
+	"validators"
 	v "github.com/gima/govalid/v1"
 )
 
@@ -10,7 +11,7 @@ func TestOperation(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			_, err := Operation().Validate(nil)
+			_, err := validators.Operation().Validate(nil)
 
 			if err == nil {
 				t.Error("Expected nil to be an invalid operation - %s", err)
@@ -24,7 +25,7 @@ func TestOperation(t *testing.T) {
 			}
 			for _, value := range testValues {
 				func (val interface{}) {
-					_, err := Operation().Validate(val)
+					_, err := validators.Operation().Validate(val)
 
 					if err == nil {
 						t.Errorf("Expected '%s' to be an invalid operation - %s", val, err)
@@ -44,7 +45,7 @@ func TestOperation(t *testing.T) {
 		}
 		for _, value := range testValues {
 			func (val interface{}) {
-				_, err := Operation().Validate(val)
+				_, err := validators.Operation().Validate(val)
 
 				if err != nil {
 					t.Errorf("Expected %s to be a valid mime type - %s", val, err);
@@ -59,7 +60,7 @@ func TestStringMimeType(t *testing.T) {
 		t.Parallel()
 		t.Run("nil", func (t *testing.T) {
 			t.Parallel()
-			var _, err = v.String(StringMimeType()).Validate(nil)
+			var _, err = v.String(validators.StringMimeType()).Validate(nil)
 
 			if err == nil {
 				t.Error("Expected nil to be an invalid mime type - %s", err)
@@ -70,7 +71,7 @@ func TestStringMimeType(t *testing.T) {
 			var testValues = []interface{}{"", "test", "@gmail", "@.com", "@gmail.com", "application/"}
 			for _, value := range testValues {
 				func (val interface{}) {
-					var _, err = v.String(StringMimeType()).Validate(val)
+					var _, err = v.String(validators.StringMimeType()).Validate(val)
 
 					if err == nil {
 						t.Errorf("Expected '%s' to be an invalid mimetype - %s", val, err)
@@ -84,7 +85,7 @@ func TestStringMimeType(t *testing.T) {
 		var testValues = []interface{}{"application/*", "image/jpeg", "application/json"}
 		for _, value := range testValues {
 			func (val interface{}) {
-				var _, err = v.String(StringMimeType()).Validate(val)
+				var _, err = v.String(validators.StringMimeType()).Validate(val)
 
 				if err != nil {
 					t.Errorf("Expected %s to be a valid mime type - %s", val, err);
