@@ -7,17 +7,16 @@ import (
 	"reflect"
 )
 
-func validatorValidator(data interface{}) (path string, err error) {
-	var _, ok = data.(v.Validator)
-
-	if !ok {
-		return "validatorValidator", fmt.Errorf("expected validator, got %s", reflect.TypeOf(data))
-	}
-
-	return "", nil
-}
-
 func ParameterType() v.Validator {
+	var validatorValidator = func (data interface{}) (path string, err error) {
+		var _, ok = data.(v.Validator)
+
+		if !ok {
+			return "validatorValidator", fmt.Errorf("expected validator, got %s", reflect.TypeOf(data))
+		}
+
+		return "", nil
+	}
 	return v.Function(validatorValidator)
 }
 

@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3502763-a75b-4789-84e7-706fba060782" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/handlers/securityDefinitionHandler.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/validators/securityDefinitionSchema.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/validators/securityDefinitionSchema_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/validators/infoSchema_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/validators/swaggerDoc_test.go" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/validators/commont_test.go" afterPath="$PROJECT_DIR$/src/validators/common_test.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/gima/govalid" afterPath="$PROJECT_DIR$/src/github.com/gima/govalid" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/handlers/handler.go" afterPath="$PROJECT_DIR$/src/handlers/handler.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/validators/pathsSchema_test.go" afterPath="$PROJECT_DIR$/src/validators/pathsSchema_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/validators/infoSchema.go" afterPath="$PROJECT_DIR$/src/validators/infoSchema.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/validators/parameterSchema.go" afterPath="$PROJECT_DIR$/src/validators/parameterSchema.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/validators/parameterSchema_test.go" afterPath="$PROJECT_DIR$/src/validators/parameterSchema_test.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/validators/swaggerDoc.go" afterPath="$PROJECT_DIR$/src/validators/swaggerDoc.go" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,47 +28,69 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="handler.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handlers/handler.go">
+      <file leaf-file-name="swaggerDoc_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validators/swaggerDoc_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="270">
+              <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="securityDefinitionHandler.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/handlers/securityDefinitionHandler.go">
+      <file leaf-file-name="infoSchema.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validators/infoSchema.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+            <state relative-caret-position="90">
+              <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="infoSchema_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validators/infoSchema_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-471">
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding>
-                <element signature="e#19#47#0" expanded="true" />
+                <element signature="e#20#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="securityDefinitionSchema.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/validators/securityDefinitionSchema.go">
+      <file leaf-file-name="contactSchema_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validators/contactSchema_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="636">
+              <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
               <folding>
-                <element signature="e#20#62#0" expanded="true" />
+                <element signature="e#20#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="securityDefinitionSchema_test.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/validators/securityDefinitionSchema_test.go">
+      <file leaf-file-name="emailSchema_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validators/emailSchema_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="58" column="18" lean-forward="false" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+            <state relative-caret-position="-150">
+              <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               <folding>
-                <element signature="e#20#41#0" expanded="true" />
+                <element signature="e#20#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="licenseSchema_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validators/licenseSchema_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="55" />
+              <folding>
+                <element signature="e#20#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,8 +99,8 @@
       <file leaf-file-name="operationSchema_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/validators/operationSchema_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="579">
+              <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding>
                 <element signature="e#20#73#0" expanded="true" />
               </folding>
@@ -84,60 +108,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pathSchema.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/validators/pathSchema.go">
+      <file leaf-file-name="parameterSchema_test.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/validators/parameterSchema_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="219">
+              <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
               <folding>
-                <element signature="e#21#63#0" expanded="true" />
+                <element signature="e#20#90#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pathSchema_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/validators/pathSchema_test.go">
+      <file leaf-file-name="parameterSchema.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validators/parameterSchema.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding>
-                <element signature="e#20#41#0" expanded="true" />
+                <element signature="e#21#81#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pathsSchema.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/validators/pathsSchema.go">
+      <file leaf-file-name="licenseSchema.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/validators/licenseSchema.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#20#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commont_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/validators/commont_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            <state relative-caret-position="75">
+              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pathsSchema_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/validators/pathsSchema_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-              <folding>
-                <element signature="e#20#41#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -194,14 +194,10 @@
         <option value="$PROJECT_DIR$/src/validators/emailSchema.go" />
         <option value="$PROJECT_DIR$/src/validators/urlSchema.go" />
         <option value="$PROJECT_DIR$/src/validators/urlSchema_test.go" />
-        <option value="$PROJECT_DIR$/src/validators/infoSchema.go" />
         <option value="$PROJECT_DIR$/src/validators/commont_test.go" />
         <option value="$PROJECT_DIR$/src/validators/contactSchema_test.go" />
-        <option value="$PROJECT_DIR$/src/validators/infoSchema_test.go" />
         <option value="$PROJECT_DIR$/src/validators/licenseSchema.go" />
         <option value="$PROJECT_DIR$/src/validators/licenseSchema_test.go" />
-        <option value="$PROJECT_DIR$/src/validators/parameterSchema.go" />
-        <option value="$PROJECT_DIR$/src/validators/parameterSchema_test.go" />
         <option value="$PROJECT_DIR$/src/validators/operationSchema.go" />
         <option value="$PROJECT_DIR$/src/validators/operationSchema_test.go" />
         <option value="$PROJECT_DIR$/src/validators/pathSchema.go" />
@@ -212,6 +208,13 @@
         <option value="$PROJECT_DIR$/src/validators/securityDefinitionSchema.go" />
         <option value="$PROJECT_DIR$/src/validators/pathsSchema_test.go" />
         <option value="$PROJECT_DIR$/src/validators/securityDefinitionSchema_test.go" />
+        <option value="$PROJECT_DIR$/src/validators/swaggerDoc.go" />
+        <option value="$PROJECT_DIR$/src/validators/infoSchema.test.go" />
+        <option value="$PROJECT_DIR$/src/validators/infoSchema.go" />
+        <option value="$PROJECT_DIR$/src/validators/swaggerDoc_test.go" />
+        <option value="$PROJECT_DIR$/src/validators/infoSchema_test.go" />
+        <option value="$PROJECT_DIR$/src/validators/parameterSchema.go" />
+        <option value="$PROJECT_DIR$/src/validators/parameterSchema_test.go" />
       </list>
     </option>
   </component>
@@ -339,6 +342,9 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/validators" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/validators" />
       <recent name="$PROJECT_DIR$/tests/validators" />
@@ -480,34 +486,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#13#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#13#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -682,16 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/urlSchema.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-          <folding>
-            <element signature="e#20#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/validators/urlSchema_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -702,38 +670,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/infoSchema.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="e#20#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/validators/infoSchema_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/licenseSchema.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <element signature="e#20#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/licenseSchema_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="e#20#58#0" expanded="true" />
           </folding>
@@ -748,22 +688,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/contactSchema_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="e#20#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/validators/contactSchema.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding>
-            <element signature="e#20#57#0" expanded="true" />
+            <element signature="e#20#57#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -784,41 +714,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/emailSchema_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="1" />
-          <folding>
-            <element signature="e#20#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/github.com/gima/govalid/v1/object.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/parameterSchema.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#21#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/parameterSchema_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#20#90#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,16 +728,6 @@
           <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding>
             <element signature="e#20#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/operationSchema_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="42" selection-end-column="14" />
-          <folding>
-            <element signature="e#20#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -862,14 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/commont_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/handlers/handler.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -888,6 +770,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/urlSchema.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding>
+            <element signature="e#20#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/securityDefinitionSchema.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#20#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/swaggerDoc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="35" selection-end-column="11" />
+          <folding>
+            <element signature="e#20#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/validators/pathsSchema.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -898,20 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/validators/securityDefinitionSchema.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="e#20#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/validators/pathsSchema_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="390">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="70" selection-end-column="14" />
           <folding>
             <element signature="e#20#41#0" expanded="true" />
           </folding>
@@ -920,10 +822,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/validators/securityDefinitionSchema_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="58" column="18" lean-forward="false" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+        <state relative-caret-position="180">
+          <caret line="59" column="14" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="59" selection-end-column="14" />
           <folding>
             <element signature="e#20#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/common_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/licenseSchema.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/infoSchema.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/swaggerDoc_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/contactSchema_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding>
+            <element signature="e#20#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/emailSchema_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="e#20#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/infoSchema_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-471">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="e#20#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/licenseSchema_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="55" />
+          <folding>
+            <element signature="e#20#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/operationSchema_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding>
+            <element signature="e#20#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/parameterSchema.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="e#21#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validators/parameterSchema_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
+          <folding>
+            <element signature="e#20#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
